@@ -1,0 +1,461 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Сброс подчеркивания у гиперссылок*/
+a{
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.container{
+
+}
+
+/*Задаем стили шапке*/
+.header{ 
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+
+    color: #fff;
+    background-color: #4206A4;
+
+    width: 100%;
+    height: 64px;
+
+    z-index: 1000;
+}
+
+/*Стили логотипа картинка + текст*/
+.logo{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Стили логотипа*/
+.logo__logo-img{
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    margin-top: -3px;
+}
+
+/*Стили текста логотипа*/
+.logo__logo-text{
+    font-weight: 500;
+}
+
+/*Общие стили для кнопок регистрации и входа(позиционирование)*/
+.buttons-registration-and-enter{
+    display: flex;
+}
+
+/*Стили кнопки регистрации*/
+.button-registration{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #4206A4;
+
+    padding: 7px 9px;
+    margin-right: 15px;
+    
+    border-radius: 3px;
+    box-shadow: 0px 2px 8px -4px;
+
+    font-weight: 600;
+
+    transition: background-color .3s;
+}
+
+/*Обращение к гиперссылки для изменения цвета*/
+.button-registration a{
+    color: #000;
+}
+
+/*При наведении на кнопку регистарции, изменяются стили*/
+.button-registration:hover{
+    background-color: #4206A4;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+/*Стили кнопки входа*/
+.button-enter{
+    background-color: #4206A4;
+    border: 1px solid #fff;
+    color: #fff;
+
+    padding: 7px 46px;
+    
+    border-radius: 3px;
+    box-shadow: 0px 2px 8px -4px;
+
+    font-weight: 600;
+
+    transition: background-color .3s;
+}
+
+/*При наведении на кнопку входа, изменяются стили*/
+.button-enter:hover{
+    background-color: #FFF;
+    border: 1px solid #fff;
+    color: #000;
+}
+
+.content-part{
+   display: flex;
+   justify-content: center;
+}
+
+/*выравнивание поисковой строчки*/
+.search-input-and-search-button{
+    display: flex;
+    justify-content: center;
+    padding-top: 85px;
+}
+
+/*редактирование поля ввода*/
+.search-input input[type=text]{
+    width: 680px;
+    height: 36px;
+
+    font-size: 20px;
+
+    box-shadow: 0px 2px 4px -4px;
+    border: 0.5px solid rgb(97, 96, 96);
+    border-radius: 3px;
+
+    transition: box-shadow .3s;
+
+    padding: 0 5px;
+}
+
+/*При нажатии на поиск, изменяется тень*/
+.search-input input[type=text]:focus{
+    box-shadow: 0px 2px 8px -4px;
+    border: 1px solid rgb(97, 96, 96);
+}
+
+/*стилизация кнопки поиска, похоже на кнопку регистрации*/
+.search-button{
+    background-color: #fff;
+    color: #000;
+
+    padding: 5px 17px;
+    margin-left: 15px;
+    
+    border: 0.5px solid rgb(97, 96, 96);
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px -4px;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    transition: box-shadow .3s;
+    transition: background-color .3s;
+}
+
+.search-button:hover{
+    color: #fff;
+    background-color: #4206A4;
+    box-shadow: 0px 2px 8px -4px;
+}
+
+/*флекс для всех карточек*/
+.flat-cards{
+    width: 1000px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 0 auto;
+    margin-top: 22px;
+}
+
+/* стиль карточки квартиры */
+.flat-card{
+    width: 256px;
+    height: 350px;
+
+    text-align: center;
+    border: 0px solid rgb(97, 96, 96);
+
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px -2px rgb(85, 85, 85);
+
+
+    transition: box-shadow .3s;
+
+    padding: 12px;
+    margin: 10px 10px;
+
+    cursor: pointer;
+}
+
+/*тень при наведении*/
+.flat-card:hover {
+    box-shadow: 0px 2px 8px -2px black !important;
+}
+
+/*кнопка ценника*/
+.flat-card__cost-button{
+    background-color: #4206A4;
+    color: #fff;
+
+    margin-top: 5px;
+    padding: 10px 15px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    border-radius: 3px;
+}
+
+/*ценник под кнопокой ценника*/
+.flat-card__under-cost-button{
+    font-size: 12px;
+    padding-top: 5px;
+    color: rgb(128, 128, 128);
+}
+
+/* стиль описания*/
+.flat-card__description{
+    text-align: left;
+    font-size: 13px;
+
+    padding-top: 7px;
+    color: rgb(97, 96, 96);
+}
+
+/* стиль категории*/
+.categoria{
+    margin-top: 85px;
+    margin-left: -65px;
+
+    border: 0px solid black;
+
+    width: 253px;
+    height: 181px;
+
+    padding: 10px;
+    box-shadow: 0px 2px 4px -2px rgb(85, 85, 85);
+
+    transition: box-shadow .3s;
+}
+
+/* стиль категории при наведении*/
+.categoria:hover {
+    box-shadow: 0px 2px 8px -2px black !important;
+}
+
+/* стиль слова Категории*/
+.categoria p:nth-child(1){
+    font-size: 20px;
+}
+
+/* стиль Цена*/
+.categoria p:nth-child(2){
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* стиль поля ввода*/
+.categoria__input{
+    padding: 0 5px;
+    width: 112px;
+    height: 25px;
+    border: 0px;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 3px rgba(0,0,0,0.5);
+}
+
+.categoria__checkboxes{
+    margin-top: 0px;
+}
+
+.footer{
+    width: 100%;
+    height: 50px;
+    background-color: #C4C4C4;
+}
+
+.footer p{
+    color: rgb(97, 97, 97);
+    padding-top: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*стиль, отвечающий за местоположение*/
+.enroll{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*стиль за оформление карточки*/
+.enroll__contain{
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px;
+
+    box-shadow: 0px 1px 4px -2px rgb(85, 85, 85);
+    border-radius: 3px;
+}
+
+/*стиль текста Регистрация*/
+.enroll__contain h1{
+    text-align: center;
+    width: 300px;
+    height: 50px;
+}
+
+/*стиль полей ввода*/
+.enroll__contain input[type="text"]{
+    width: 300px;
+    height: 40px;
+    margin: 7px;
+
+    border-radius: 3px;
+    border-color: #fff;
+
+    padding-left: 5px;
+
+    box-shadow: inset -1px -1px 2px rgba(122, 122, 122, 0.3);
+}
+
+/*стиль кнопки зарегестрироваться и войти*/
+.enroll__button{
+    width: 300px;
+    height: 40px;
+
+    text-align: center;
+
+    background-color: #4206A4;
+    color: #fff;
+    border: 1px solid #4206A4;
+
+    margin-top: 7px;
+    margin-left: 6.5px;
+    padding: 7px 13px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    border-radius: 3px;
+
+    transition: background-color .3s;
+
+    cursor: pointer;
+}
+
+.enroll__button:hover{
+    background-color: #FFF;
+    color: #4206A4;
+    border: 1px solid #4206A4;
+}
+
+.enroll__have-acount{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.enroll__have-acount a{
+    font-size: 20px;
+    color: #4206A4;
+}
+
+/*Стиль для якоря <a>*/
+.logo_style{
+    color: #FFF;
+}
+
+
+.flat-card-description{
+    width: 800px;
+    height: 80vh;
+
+    margin: auto;
+    margin-top: 20px;
+
+    box-shadow: 0px 1px 4px -2px rgb(85, 85, 85);
+    border-radius: 3px;
+}
+
+.flat-card-description{
+    padding: 15px 20px;
+}
+
+.flat-card-description__name{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.flat-card-description__photo-price-contact{
+    display: flex;
+}
+
+.photo-price-contact__price-and-contact{
+    padding-left: 20px;
+}
+
+.price-button{
+    width: 330px;
+    height: 50px;
+
+    text-align: center;
+
+    background-color: #4206A4;
+    color: #fff;
+    border: 1px solid #4206A4;
+
+    margin-top: 7px;
+    margin-left: 6.5px;
+    padding: 10px 13px;
+
+    font-size: 25px;
+    font-weight: 500;
+
+    border-radius: 3px;
+
+    transition: background-color .3s;
+
+    cursor: pointer;
+}
+
+.price-in-sourse{
+    margin-top: 5px;
+    margin-right: 5px;
+    text-align: right;
+    padding-bottom: 50px;
+}
+
+.contacts p{
+    margin-bottom: 15px;
+}
+
+.contacts .contacts_number{
+    text-align: center;
+    border: 2px solid #4206A4;
+    border-radius: 3px;
+    padding: 15px 0;
+    margin: 0 6px;
+
+    width: 330px;
+}
+
+.flat-description{
+    margin-top: 10px;
+}
